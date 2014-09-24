@@ -9158,7 +9158,7 @@ h6 {
 }
 /* line 112, ../scss/_gate7.scss */
 .main-menu-component ul li a:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.4);
 }
 /* line 119, ../scss/_gate7.scss */
 .main-menu-component ul li.current {
@@ -9174,30 +9174,30 @@ h6 {
   background: none;
 }
 
-/* line 136, ../scss/_gate7.scss */
+/* line 138, ../scss/_gate7.scss */
 .select-language-component {
   list-style: none;
   margin-bottom: 0;
 }
-/* line 141, ../scss/_gate7.scss */
+/* line 143, ../scss/_gate7.scss */
 .select-language-component li {
   float: left;
   display: inline-block;
   margin: 25px 7px 0;
   font-size: 0.9em;
 }
-/* line 147, ../scss/_gate7.scss */
+/* line 149, ../scss/_gate7.scss */
 .select-language-component li a {
   float: left;
   color: #aaa;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
 }
-/* line 153, ../scss/_gate7.scss */
+/* line 155, ../scss/_gate7.scss */
 .select-language-component li:hover {
   color: #fff;
 }
-/* line 157, ../scss/_gate7.scss */
+/* line 159, ../scss/_gate7.scss */
 .select-language-component li .current-language {
   color: #fff;
   font-weight: 500;
@@ -9205,7 +9205,7 @@ h6 {
 
 /* 'PRELOADER
 ==================================================== */
-/* line 182, ../scss/_gate7.scss */
+/* line 184, ../scss/_gate7.scss */
 .loader {
   background: #333;
   position: fixed;
@@ -9219,12 +9219,12 @@ h6 {
   text-align: center;
 }
 
-/* line 183, ../scss/_gate7.scss */
+/* line 185, ../scss/_gate7.scss */
 .loader-background {
   background: url("../images/pattern.jpg");
 }
 
-/* line 184, ../scss/_gate7.scss */
+/* line 186, ../scss/_gate7.scss */
 .loader-container {
   height: 80%;
   width: 50%;
@@ -9237,12 +9237,12 @@ h6 {
   font-size: 18px;
 }
 
-/* line 185, ../scss/_gate7.scss */
+/* line 187, ../scss/_gate7.scss */
 .loader-imagem {
   width: 150px;
 }
 
-/* line 186, ../scss/_gate7.scss */
+/* line 188, ../scss/_gate7.scss */
 .loader-carregando {
   display: inline-block;
   border-left: 1px solid #888;
