@@ -9044,36 +9044,30 @@ h1 {
 }
 
 /* line 37, ../scss/_gate7.scss */
-h1 {
-  font-size: 3em;
-  /*  letter-spacing: 0.05em; */
-}
-
-/* line 38, ../scss/_gate7.scss */
 h2 {
   font-size: 2em;
   /*  letter-spacing: 0.05em; */
 }
 
-/* line 39, ../scss/_gate7.scss */
+/* line 38, ../scss/_gate7.scss */
 h3 {
   font-size: 30px;
   /*  letter-spacing: 0em;    */
 }
 
-/* line 40, ../scss/_gate7.scss */
+/* line 39, ../scss/_gate7.scss */
 h4 {
   font-size: 25px;
   /*  letter-spacing: 0.05em; */
 }
 
-/* line 41, ../scss/_gate7.scss */
+/* line 40, ../scss/_gate7.scss */
 h5 {
   font-size: 20px;
   /*  letter-spacing: 0.05em; */
 }
 
-/* line 42, ../scss/_gate7.scss */
+/* line 41, ../scss/_gate7.scss */
 h6 {
   font-size: 0.6em;
   line-height: 6px;
@@ -9083,7 +9077,7 @@ h6 {
   font-family: "Helvetica Neue",Arial,"Liberation Sans",FreeSans,sans-serif;
 }
 
-/* line 53, ../scss/_gate7.scss */
+/* line 52, ../scss/_gate7.scss */
 * {
   transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
@@ -9092,9 +9086,10 @@ h6 {
   -o-transition: all 0.5s ease 0s;
 }
 
-/* line 58, ../scss/_gate7.scss */
+/* line 57, ../scss/_gate7.scss */
 .header-component {
   width: 100%;
+  position: relative;
   background: #283f4f;
   /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -9114,26 +9109,38 @@ h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#283f4f', endColorstr='#2b4151',GradientType=0 );
   /* IE6-8 */
 }
+/* line 74, ../scss/_gate7.scss */
+.header-component:after {
+  content: " ";
+  background: rgba(0, 0, 0, 0.2);
+  height: 5px;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  display: block;
+  z-index: 1000;
+}
 
-/* line 75, ../scss/_gate7.scss */
+/* line 91, ../scss/_gate7.scss */
 .logotipo-component {
   margin-top: 20px;
 }
-/* line 78, ../scss/_gate7.scss */
+/* line 94, ../scss/_gate7.scss */
 .logotipo-component .logotipo-main {
   display: block;
   width: 141px;
-  height: 33px;
+  height: 40px;
   text-indent: -999999;
   font-size: 0;
-  background: url("../images/logos/gate72-white.png");
+  background: url("../images/logos/brand-main.png");
+  background-repeat: no-repeat;
 }
-/* line 86, ../scss/_gate7.scss */
+/* line 103, ../scss/_gate7.scss */
 .logotipo-component .logotipo-main:hover {
   opacity: 0.8;
 }
 
-/* line 94, ../scss/_gate7.scss */
+/* line 112, ../scss/_gate7.scss */
 .main-menu-component ul {
   display: inline-block;
   font-family: 'Roboto Condensed', sans-serif;
@@ -9141,7 +9148,7 @@ h6 {
   width: 100%;
   text-align: center;
 }
-/* line 101, ../scss/_gate7.scss */
+/* line 119, ../scss/_gate7.scss */
 .main-menu-component ul li {
   list-style: none;
   display: inline-block;
@@ -9149,63 +9156,153 @@ h6 {
   font-size: 1.1em;
   font-weight: 400;
   border-top: 5px solid transparent;
+  position: relative;
+  margin-left: -3px;
 }
-/* line 109, ../scss/_gate7.scss */
+/* line 129, ../scss/_gate7.scss */
 .main-menu-component ul li a {
   padding: 20px 20px;
   color: #ccc;
   display: block;
 }
-/* line 112, ../scss/_gate7.scss */
+/* line 132, ../scss/_gate7.scss */
 .main-menu-component ul li a:hover {
   background: rgba(0, 0, 0, 0.4);
 }
-/* line 119, ../scss/_gate7.scss */
+/* line 137, ../scss/_gate7.scss */
+.main-menu-component ul li:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+/* line 138, ../scss/_gate7.scss */
+.main-menu-component ul li:hover:after {
+  content: " ";
+  background: rgba(0, 0, 0, 0.4);
+  height: 5px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  position: absolute;
+  display: block;
+  z-index: 2000;
+}
+/* line 154, ../scss/_gate7.scss */
 .main-menu-component ul li.current {
   border-color: red;
 }
-/* line 121, ../scss/_gate7.scss */
+/* line 156, ../scss/_gate7.scss */
 .main-menu-component ul li.current a {
   color: #fff;
   cursor: default;
 }
-/* line 124, ../scss/_gate7.scss */
+/* line 159, ../scss/_gate7.scss */
 .main-menu-component ul li.current a:hover {
   background: none;
 }
+/* line 163, ../scss/_gate7.scss */
+.main-menu-component ul li.current:hover:after {
+  content: "";
+  height: 0px;
+}
+/* line 172, ../scss/_gate7.scss */
+.main-menu-component .menu-off-canvas-toggle {
+  float: right;
+}
 
-/* line 138, ../scss/_gate7.scss */
+/* line 186, ../scss/_gate7.scss */
 .select-language-component {
   list-style: none;
   margin-bottom: 0;
+  float: right;
+  opacity: 0.4;
 }
-/* line 143, ../scss/_gate7.scss */
+/* line 192, ../scss/_gate7.scss */
+.select-language-component:hover {
+  opacity: 1;
+}
+/* line 195, ../scss/_gate7.scss */
 .select-language-component li {
   float: left;
   display: inline-block;
   margin: 25px 7px 0;
   font-size: 0.9em;
 }
-/* line 149, ../scss/_gate7.scss */
+/* line 201, ../scss/_gate7.scss */
 .select-language-component li a {
   float: left;
   color: #aaa;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
 }
-/* line 155, ../scss/_gate7.scss */
+/* line 207, ../scss/_gate7.scss */
 .select-language-component li:hover {
   color: #fff;
 }
-/* line 159, ../scss/_gate7.scss */
+/* line 211, ../scss/_gate7.scss */
 .select-language-component li .current-language {
   color: #fff;
   font-weight: 500;
 }
 
+/* line 242, ../scss/_gate7.scss */
+.banner-page-component .banner-page {
+  height: 180px;
+  background: #1f2a34 url("../images/banner/background-page-1.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+/* line 251, ../scss/_gate7.scss */
+.banner-page-component .breadcrumbs {
+  display: block;
+  padding: 0.5625rem 0.875rem 0.5625rem;
+  overflow: hidden;
+  margin-left: 0;
+  list-style: none;
+  border: none;
+  background: none;
+  float: right;
+  border-radius: 3px;
+  margin-top: 10px;
+  opacity: 0.3;
+}
+/* line 264, ../scss/_gate7.scss */
+.banner-page-component .breadcrumbs:hover {
+  opacity: 1;
+}
+/* line 266, ../scss/_gate7.scss */
+.banner-page-component .breadcrumbs > * {
+  margin: 0;
+  float: left;
+  font-size: 0.6875rem;
+  line-height: 0.6875rem;
+  text-transform: inherit;
+  color: #008CBA;
+}
+/* line 275, ../scss/_gate7.scss */
+.banner-page-component .breadcrumbs > * a {
+  color: #999;
+}
+/* line 276, ../scss/_gate7.scss */
+.banner-page-component .breadcrumbs > *.unavailable {
+  color: #fff;
+}
+/* line 277, ../scss/_gate7.scss */
+.banner-page-component .breadcrumbs > *.unavailable a {
+  color: #ccc;
+}
+/* line 278, ../scss/_gate7.scss */
+.banner-page-component .breadcrumbs > *.current {
+  cursor: default;
+  color: #333333;
+}
+/* line 279, ../scss/_gate7.scss */
+.banner-page-component .breadcrumbs > *.current a {
+  cursor: default;
+  color: #aaa;
+}
+
 /* 'PRELOADER
 ==================================================== */
-/* line 184, ../scss/_gate7.scss */
+/* line 301, ../scss/_gate7.scss */
 .loader {
   background: #333;
   position: fixed;
@@ -9219,12 +9316,12 @@ h6 {
   text-align: center;
 }
 
-/* line 185, ../scss/_gate7.scss */
+/* line 302, ../scss/_gate7.scss */
 .loader-background {
   background: url("../images/pattern.jpg");
 }
 
-/* line 186, ../scss/_gate7.scss */
+/* line 303, ../scss/_gate7.scss */
 .loader-container {
   height: 80%;
   width: 50%;
@@ -9237,12 +9334,12 @@ h6 {
   font-size: 18px;
 }
 
-/* line 187, ../scss/_gate7.scss */
+/* line 304, ../scss/_gate7.scss */
 .loader-imagem {
   width: 150px;
 }
 
-/* line 188, ../scss/_gate7.scss */
+/* line 305, ../scss/_gate7.scss */
 .loader-carregando {
   display: inline-block;
   border-left: 1px solid #888;
