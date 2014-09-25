@@ -22,8 +22,10 @@
 
 
 $font-title: 'bebas_neueregular', Helvetica, Arial, sans-serif;
+$font-title-secundary: 'Roboto Condensed', sans-serif;
+
 $font-main:  'Roboto', sans-serif;
- $primary-color: #333;
+$primary-color: #294050;
 
 
 
@@ -31,9 +33,9 @@ $font-main:  'Roboto', sans-serif;
 /* `Headings
 ----------------------------------------------------------------------------------------------------*/
    /* Default header styles */
-    h1, h2, h3, h4, h5, h6 {  font-family: $font-title; font-style: normal; color: #007135; text-rendering: optimizeLegibility; margin-top: 0.2rem;  margin-bottom: 0.5rem;  line-height: 1.4;  text-transform: uppercase; font-weight: normal}
+    h1, h2, h3, h4, h5, h6 {  font-family: $font-title; font-style: normal; color: $primary-color; text-rendering: optimizeLegibility; margin-top: 0.2rem;  margin-bottom: 0.5rem;  line-height: 1.4;  text-transform: uppercase; font-weight: normal}
 
-    h1 {  font-size: 3em;   /*  letter-spacing: 0.05em; */  }
+    h1 {  font-size: 2.5em;   /*  letter-spacing: 0.05em; */  }
     h2 {  font-size: 2em;   /*  letter-spacing: 0.05em; */  }
     h3 {  font-size: 30px; /*  letter-spacing: 0em;    */  }
     h4 {  font-size: 25px; /*  letter-spacing: 0.05em; */  }
@@ -41,7 +43,7 @@ $font-main:  'Roboto', sans-serif;
     h6 {  font-size: 0.6em; line-height: 6px; color: #777;  font-weight: bold; margin: 0 !important; font-family: "Helvetica Neue",Arial,"Liberation Sans",FreeSans,sans-serif;}
 
 
- 
+p.lead { font-family: $font-main; font-weight: 300; }
 
 
 body{ }
@@ -49,7 +51,7 @@ body{ }
 
 
 //transition
-*{   transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s;  -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; }
+*, *:before, *:after{   transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s;  -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; }
 
 
  
@@ -111,7 +113,7 @@ body{ }
  
         ul{
           display: inline-block; 
-          font-family: 'Roboto Condensed', sans-serif;
+          font-family: $font-title-secundary;
           margin: 0;
           width: 100%;
           text-align: center;
@@ -152,19 +154,39 @@ body{ }
 
 
            li.current{
-                border-color: red;
+                border-color: #f03034;
+                background:  rgba(0,0,0,0.2);
+                position: relative;
+
                    a{
                     color: #fff;
                     cursor: default;
-                    &:hover{background: none;}
-                   }
-                 
+                    }
 
-                 &:hover:after{
+
+                 &:after{
                   content: "";
-                  height: 0px;
-                  
+                  background: rgba(0,0,0,0.2);
+                  height: 5px;
+                  width: 100%;
+                  bottom: -5px;
+                  left: 0;
+                  display: block;
+                   position: absolute;
                 }
+
+                    &:hover:after{
+                  content: " ";
+                  background: rgba(0, 0, 0, 0.2);
+                  height: 5px;
+                  width: 100%;
+                  bottom: -5px;
+                  left: 0;
+                  position: absolute;
+                  display: block;
+                  z-index: 2000;
+                }
+                  
             }
 
         }
@@ -239,14 +261,21 @@ body{ }
 
 
 .banner-page-component{
-      .banner-page{
-        height: 180px;
-        background: #1f2a34 url("../images/banner/background-page-1.jpg");
-        background-size: cover;
-        background-position: center center;
-      }
 
-
+      //banner somente com cor default
+          .banner-page{
+            height: 180px;
+            background-color: #1f2a34;
+            background-size: cover;
+            background-position: center center;
+          }
+      
+      //Banners personalizados
+        .banner-page-1{background-image: url("../images/banner/background-page-1.jpg")}
+      
+      //Se passar o mouse em cima do banner: acende o breadcrumb e movimenta a imagem de fundo
+        .banner-page:hover .breadcrumbs { opacity: 1}
+        .banner-page:hover  { background-position: center 60%;}
 
       .breadcrumbs {
           display: block;
@@ -287,10 +316,172 @@ body{ }
 
 
 
+.content-with-left-nav-component{
+  position: relative;
+margin-bottom: 50px;
+display: inline-block;
+border-bottom: 1px solid #ccc;
+width: 100%;
+
+
+         &:before{
+            content: " ";
+            background: rgba(0, 0, 0, 0.2);
+            height: 3px;
+            width: 100%;
+            top: 0px;
+            left: 0;
+            display: block;
+            z-index: 1000;
+            position: absolute;
+          }
+
+
+         &:after{
+            content: " ";
+            background: rgba(0, 0, 0, 0.2);
+            height: 3px;
+            width: 100%;
+            bottom: 0px;
+            left: 0;
+            display: block;
+            z-index: 1000;
+            position: absolute;
+          }
 
 
 
+    aside.aside{
+        .name-page{
+          color: #bbb;
+          font-family: $font-title;
+          font-size: 48px;
+          text-align: right;
+          padding: 65px 30px 20px 0;
+        }
 
+      .columns{padding: 0 !important}
+       
+       & > div {
+         background: $primary-color;
+         padding: 0;
+       }
+      .custom-list-nav{
+          text-align: right;
+          float: left;
+          width: 100%;
+          margin: 0;
+          font-family: $font-title-secundary;
+          font-size: 1em;
+          text-transform: uppercase;
+
+
+          li{
+            list-style: none;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+                  a{ 
+                    padding: 20px 30px 20px 0;
+                    display: block;
+                    color:#aaa;
+                    &:hover{ background: rgba(0,0,0,0.1); color: #eee}
+                  }
+            &:first-child{border-top: 1px solid rgba(0,0,0,0.3);}
+            
+          }
+          .current{ 
+            font-weight: 700;
+           
+
+              a{
+                  color: #fff;
+                background: rgba(0,0,0,0.4);
+                cursor: default;
+                position: relative;
+
+                    &:after{
+                        content: " ";
+                        height: 0;
+                        width: 0;
+                        top: 50%;
+                        right: 0;
+                        display: block;
+                        border-top: 20px solid transparent;
+                        position: absolute;
+                        border-bottom: 20px solid transparent;
+                        border-right: 20px solid #fff;
+                        margin-top: -20px;
+                      }
+                &:hover{ background: rgba(0,0,0,0.4);}
+
+
+              }
+          }
+        }//list-nav
+      }//aside
+
+    section{
+           > .small-12{  padding: 0}
+          
+         
+           
+
+            // Small screens
+            @media only screen { 
+              .main{padding: 20px }
+              .small-12{padding: 0 }
+               .content-services{padding-top:0 }
+            } /* Define mobile styles */
+
+
+            @media only screen and (min-width: 40.063em) { 
+ .main{padding-top: 0px }
+         .content-services{padding: 70px 0}
+            } /* min-width 641px, medium screens */
+
+
+          
+    }   
+
+
+.left-off-canvas-menu.small{ 
+  .off-canvas-list{
+      label {text-align: right;}
+        a{color: #999}
+
+      .current a{background: #242424; position: relative; color: #fff;
+
+                    &:after{
+                        content: " ";
+                        background: #f03034;
+                        height: 100%;
+                        width: 5px;
+                        top: 0;
+                        right: 0;
+                        display: block;
+                         position: absolute; 
+                        z-index: 3000;
+                      }
+                    }
+
+     a{
+        font-size: 0.8em;
+        text-align:right;
+        padding-right: 20px
+      }
+  }
+ 
+}
+
+ 
+
+
+}
+
+
+
+footer{
+
+}
 
 
 
