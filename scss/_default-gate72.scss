@@ -1,0 +1,168 @@
+/*
+  Nome do projeto: Website | Gate7 import/export
+  Design/Front-end: Felipe Genuino, design@felipegenuino.com, http://felipegenuino.com ;
+  Date: 2014/SET
+*/
+
+
+// Small screens
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */
+
+
+
+
+
+
+/*/////////////////////////////////////////// TIPOGRAFIA  //////////////////////////////////////////*/
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700);
+ 
+      @font-face {
+          font-family: 'bebas_neueregular';
+          src: url('../fonts/bebasneue-webfont.eot');
+          src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+               url('../fonts/bebasneue-webfont.woff') format('woff'),
+               url('../fonts/bebasneue-webfont.ttf') format('truetype'),
+               url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+          font-weight: normal;
+          font-style: normal;
+      }
+
+
+$font-title: 'bebas_neueregular', Helvetica, Arial, sans-serif;
+$font-title-secundary: 'Roboto Condensed', sans-serif;
+$font-main:  'Roboto', sans-serif;
+$primary-color: #294050;
+
+
+
+/* 'EFEITO SELEÇÃO 
+----------------------------------------------------------------------------------------------------*/
+  /* Safari */  ::selection    {  background: #FFFF00; color: #000; text-shadow: none;}
+  /* Firefox */ ::-moz-selection {  background: #FFFF00; color: #000; text-shadow: none;}
+
+
+
+/* `Headings
+----------------------------------------------------------------------------------------------------*/
+   /* Default header styles */
+    h1, h2, h3, h4, h5, h6 {  font-family: $font-title; font-style: normal; color: $primary-color; text-rendering: optimizeLegibility; margin-top: 0.2rem;  margin-bottom: 0.5rem;  line-height: 1.4;  text-transform: uppercase; font-weight: normal}
+
+    h1 {  font-size: 2.5em;   /*  letter-spacing: 0.05em; */  }
+    h2 {  font-size: 2em;   /*  letter-spacing: 0.05em; */  }
+    h3 {  font-size: 30px; /*  letter-spacing: 0em;    */  }
+    h4 {  font-size: 25px; /*  letter-spacing: 0.05em; */  }
+    h5 {  font-size: 20px;   /*  letter-spacing: 0.05em; */  }
+    h6 {  font-size: 0.6em; line-height: 6px; color: #777;  font-weight: bold; margin: 0 !important; font-family: "Helvetica Neue",Arial,"Liberation Sans",FreeSans,sans-serif;}
+
+
+p.lead { font-family: $font-main; font-weight: 300; }
+
+
+body{ }
+
+
+
+//transition
+*, *:before, *:after{   transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s;  -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+      .select-language-component{
+          list-style: none;
+           margin-bottom: 0;
+           float: right;
+           opacity: 0.4;
+
+           &:hover{ opacity: 1}
+
+
+        li{
+          float: left; 
+          display: inline-block;
+          margin: 25px 7px 0;
+          font-size: 0.9em;
+
+          a{ 
+            float: left;
+            color: #aaa;
+            font-family: $font-main;
+            font-weight: 100; 
+          }
+          &:hover{
+              color: #fff;
+            }
+
+          .current-language{
+              color: #fff;
+              font-weight: 500; 
+          }
+
+        }
+
+
+
+      }
+
+
+
+
+ 
+
+//component-menu
+.menu-off-canvas-component{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

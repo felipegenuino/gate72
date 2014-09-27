@@ -1,0 +1,53 @@
+
+.banner-page-component{
+
+      //banner somente com cor default
+          .banner-page{
+            height: 180px;
+            background-color: #1f2a34;
+            background-size: cover;
+            background-position: center center;
+          }
+      
+      //Banners personalizados
+        .banner-page-1{background-image: url("../images/banner/background-page-1.jpg")}
+      
+      //Se passar o mouse em cima do banner: acende o breadcrumb e movimenta a imagem de fundo
+        .banner-page:hover .breadcrumbs { opacity: 1}
+        .banner-page:hover  { background-position: center 60%;}
+
+      .breadcrumbs {
+          display: block;
+          padding: 0.5625rem 0.875rem 0.5625rem;
+          overflow: hidden;
+          margin-left: 0;
+          list-style: none;
+           border: none;
+           background: none;  
+           float: right;
+          border-radius: 3px;
+          margin-top: 10px;
+          opacity: 0.3;
+
+          &:hover{ opacity: 1}
+
+          > * {
+          margin: 0;
+          float: left;
+          font-size: 0.6875rem;
+          line-height: 0.6875rem;
+          text-transform: inherit;
+          color: #008CBA;
+          }
+
+          > * a { color: #999; }
+          > *.unavailable { color: #fff; }
+          > *.unavailable a { color: #ccc; }
+          > *.current { cursor: default; color: #333333; }
+          > *.current a { cursor: default; color: #aaa; }
+        }
+
+
+
+
+}

@@ -1,0 +1,139 @@
+
+      .header-component{
+        width: 100%;
+        position: relative;
+        //border-bottom: 5px solid rgba(0,0,0,0.1);
+         background: rgb(40,63,79); /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4M2Y0ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyYjQxNTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  rgba(40,63,79,1) 0%, rgba(43,65,81,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(40,63,79,1)), color-stop(100%,rgba(43,65,81,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(40,63,79,1) 0%,rgba(43,65,81,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(40,63,79,1) 0%,rgba(43,65,81,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(40,63,79,1) 0%,rgba(43,65,81,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(40,63,79,1) 0%,rgba(43,65,81,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#283f4f', endColorstr='#2b4151',GradientType=0 ); /* IE6-8 */
+      
+
+
+                &:after{
+                  content: " ";
+                  background: rgba(0,0,0,0.2);
+                  height: 5px;
+                  width: 100%;
+                  top: 10px;
+                  left: 0;
+                  display: block;
+                  z-index: 1000;
+                }
+
+      }
+
+   
+
+
+
+        .logotipo-component{
+           //border: 1px solid #aaa;
+           margin-top: 20px;
+           .logotipo-main{
+            display: block;
+            width: 141px;
+            height: 40px;
+            text-indent: -999999;
+            font-size: 0;
+            background: url('../images/logos/brand-main.png');
+            background-repeat: no-repeat;
+            
+            &:hover{ opacity: 0.8}
+          }
+        }
+
+
+
+
+      .main-menu-component{
+ 
+        ul{
+          display: inline-block; 
+          font-family: $font-title-secundary;
+          margin: 0;
+          width: 100%;
+          text-align: center;
+ 
+          li{   
+            list-style: none ;
+            display: inline-block; 
+            text-transform: uppercase;
+            font-size: 1.1em;
+            font-weight: 400;
+            border-top: 5px solid transparent;
+            position: relative;
+            margin-left: -3px;
+             
+                a{ padding: 20px 20px;
+                    color: #ccc;
+                    display: block;
+                    &:hover{
+                      background: rgba(0,0,0,0.4);
+                     }
+                  }
+
+            &:hover{ border-color:  rgba(0,0,0,0.4);}
+            &:hover:after{
+                  content: " ";
+                  background: rgba(0, 0, 0, 0.4);
+                  height: 5px;
+                  width: 100%;
+                  bottom: -5px;
+                  left: 0;
+                  position: absolute;
+                  display: block;
+                  z-index: 2000;
+                }
+
+          }
+
+
+
+           li.current{
+                border-color: #f03034;
+                background:  rgba(0,0,0,0.2);
+                position: relative;
+
+                   a{
+                    color: #fff;
+                    cursor: default;
+                    }
+
+
+                 &:after{
+                  content: "";
+                  background: rgba(0,0,0,0.2);
+                  height: 5px;
+                  width: 100%;
+                  bottom: -5px;
+                  left: 0;
+                  display: block;
+                   position: absolute;
+                }
+
+                    &:hover:after{
+                  content: " ";
+                  background: rgba(0, 0, 0, 0.2);
+                  height: 5px;
+                  width: 100%;
+                  bottom: -5px;
+                  left: 0;
+                  position: absolute;
+                  display: block;
+                  z-index: 2000;
+                }
+                  
+            }
+
+        }
+
+        .menu-off-canvas-toggle { float: right; }
+
+      }

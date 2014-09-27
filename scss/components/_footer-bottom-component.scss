@@ -1,0 +1,50 @@
+.footer-bottom-component{
+    padding: 20px 0;
+    background: shade($primary-color, 50%);
+    color: $monsoon;
+     font-weight: 100;
+
+     .logo{margin-bottom: 20px;}
+     .copyright{margin-bottom: 20px;}
+    
+    p{font-size: 0.8em ; margin: 0;
+         a{color: scale-lightness($primary-color, 40%);
+            &:hover{ text-decoration: underline;}
+        }
+    }
+
+     &:hover p{
+        color: #aaa;
+    }      
+
+
+
+    //SOCIAL LINKS
+    .social-links{  
+        list-style: none;
+        display: inline-block;
+        margin: 0;
+
+            li{
+                float: left;
+                margin: 0 15px 0 0;
+                
+
+                a{ 
+                    display: block;
+                    padding-top: 10px;
+                    opacity: 0.3;
+
+                    &:hover{ opacity: 0.7}
+                }
+
+                .has-tip{ 
+                    border: none;
+                }
+            }
+     }  
+
+
+
+
+}
