@@ -9155,6 +9155,16 @@ p.lead {
   font-weight: 500;
 }
 
+/* line 154, ../scss/_default-gate72.scss */
+.footer-top-component {
+  background: #e5f4ff;
+  padding: 20px 0;
+}
+/* line 158, ../scss/_default-gate72.scss */
+.footer-top-component p {
+  font-size: 0.750em;
+}
+
 /* line 2, ../scss/components/_header-component.scss */
 .header-component {
   width: 100%;
