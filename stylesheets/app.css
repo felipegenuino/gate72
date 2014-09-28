@@ -9034,7 +9034,7 @@ th.hide-for-touch {
 /* 'EFEITO SELEÇÃO 
 ----------------------------------------------------------------------------------------------------*/
 /* Safari */
-/* line 61, ../scss/_default-gate72.scss */
+/* line 62, ../scss/_default-gate72.scss */
 ::selection {
   background: #FFFF00;
   color: #000;
@@ -9042,7 +9042,7 @@ th.hide-for-touch {
 }
 
 /* Firefox */
-/* line 62, ../scss/_default-gate72.scss */
+/* line 63, ../scss/_default-gate72.scss */
 ::-moz-selection {
   background: #FFFF00;
   color: #000;
@@ -9052,7 +9052,7 @@ th.hide-for-touch {
 /* `Headings
 ----------------------------------------------------------------------------------------------------*/
 /* Default header styles */
-/* line 69, ../scss/_default-gate72.scss */
+/* line 70, ../scss/_default-gate72.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "bebas_neueregular", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -9065,37 +9065,37 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/* line 71, ../scss/_default-gate72.scss */
+/* line 72, ../scss/_default-gate72.scss */
 h1 {
   font-size: 2.5em;
   /*  letter-spacing: 0.05em; */
 }
 
-/* line 72, ../scss/_default-gate72.scss */
+/* line 73, ../scss/_default-gate72.scss */
 h2 {
   font-size: 2em;
   /*  letter-spacing: 0.05em; */
 }
 
-/* line 73, ../scss/_default-gate72.scss */
+/* line 74, ../scss/_default-gate72.scss */
 h3 {
   font-size: 30px;
   /*  letter-spacing: 0em;    */
 }
 
-/* line 74, ../scss/_default-gate72.scss */
+/* line 75, ../scss/_default-gate72.scss */
 h4 {
   font-size: 25px;
   /*  letter-spacing: 0.05em; */
 }
 
-/* line 75, ../scss/_default-gate72.scss */
+/* line 76, ../scss/_default-gate72.scss */
 h5 {
   font-size: 20px;
   /*  letter-spacing: 0.05em; */
 }
 
-/* line 76, ../scss/_default-gate72.scss */
+/* line 77, ../scss/_default-gate72.scss */
 h6 {
   font-size: 0.6em;
   line-height: 6px;
@@ -9105,13 +9105,13 @@ h6 {
   font-family: "Helvetica Neue",Arial,"Liberation Sans",FreeSans,sans-serif;
 }
 
-/* line 79, ../scss/_default-gate72.scss */
+/* line 80, ../scss/_default-gate72.scss */
 p.lead {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 
-/* line 87, ../scss/_default-gate72.scss */
+/* line 88, ../scss/_default-gate72.scss */
 *, *:before, *:after {
   transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
@@ -9120,49 +9120,210 @@ p.lead {
   -o-transition: all 0.5s ease 0s;
 }
 
-/* line 102, ../scss/_default-gate72.scss */
+/* line 91, ../scss/_default-gate72.scss */
+.modern {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: all 0.3s ease-out;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.3), 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  /* Font styles */
+  text-shadow: 0 1px rgba(255, 255, 255, 0.7);
+}
+
+/* line 115, ../scss/_default-gate72.scss */
+.embossed-link {
+  box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22), inset 0 -3px 2px rgba(0, 0, 0, 0.17), inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* line 124, ../scss/_default-gate72.scss */
+.modern.embossed-link {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.3), 0 0 4px 1px rgba(0, 0, 0, 0.2), inset 0 3px 2px rgba(255, 255, 255, 0.22), inset 0 -3px 2px rgba(0, 0, 0, 0.15), inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* line 136, ../scss/_default-gate72.scss */
+.modern.embossed-link:active {
+  box-shadow: inset 0 -2px 1px rgba(255, 255, 255, 0.2), inset 0 3px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* line 142, ../scss/_default-gate72.scss */
+.socle {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 147, ../scss/_default-gate72.scss */
+.socle:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(255, 255, 255, 0.7);
+  top: -6px;
+  bottom: -6px;
+  right: -6px;
+  left: -6px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), transparent);
+}
+
+/* line 178, ../scss/_default-gate72.scss */
 .select-language-component {
   list-style: none;
   margin-bottom: 0;
   float: right;
   opacity: 0.4;
 }
-/* line 108, ../scss/_default-gate72.scss */
+/* line 184, ../scss/_default-gate72.scss */
 .select-language-component:hover {
   opacity: 1;
 }
-/* line 111, ../scss/_default-gate72.scss */
+/* line 187, ../scss/_default-gate72.scss */
 .select-language-component li {
   float: left;
   display: inline-block;
   margin: 25px 7px 0;
   font-size: 0.9em;
 }
-/* line 117, ../scss/_default-gate72.scss */
+/* line 193, ../scss/_default-gate72.scss */
 .select-language-component li a {
   float: left;
   color: #aaa;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
 }
-/* line 123, ../scss/_default-gate72.scss */
+/* line 199, ../scss/_default-gate72.scss */
 .select-language-component li:hover {
   color: #fff;
 }
-/* line 127, ../scss/_default-gate72.scss */
+/* line 203, ../scss/_default-gate72.scss */
 .select-language-component li .current-language {
   color: #fff;
   font-weight: 500;
 }
 
-/* line 154, ../scss/_default-gate72.scss */
+/* line 230, ../scss/_default-gate72.scss */
 .footer-top-component {
   background: #e5f4ff;
   padding: 20px 0;
 }
-/* line 158, ../scss/_default-gate72.scss */
+/* line 234, ../scss/_default-gate72.scss */
 .footer-top-component p {
   font-size: 0.750em;
+}
+
+/* line 243, ../scss/_default-gate72.scss */
+.owl-carousel-component {
+  position: relative;
+  background: #142028;
+  /* Define mobile styles */
+  /* min-width 641px, medium screens */
+}
+/* line 248, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-stage-outer .owl-stage .owl-item {
+  text-align: center;
+}
+/* line 251, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-stage-outer .owl-stage .owl-item .impact-mensagem {
+  text-transform: uppercase;
+}
+/* line 256, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-stage-outer .owl-stage .owl-item .impact-mensagem .button-impact-mensagem {
+  text-transform: uppercase;
+  font-family: "bebas_neueregular", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  background: #e5f4ff;
+  color: #294050;
+}
+/* line 265, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-stage-outer .owl-stage .owl-item .impact-mensagem .button-impact-mensagem:hover {
+  background: #f03034;
+  color: #fff;
+}
+/* line 273, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-stage-outer .banner-1 {
+  background: #333 url("../images/slide/banner-1.jpg") center center;
+  background-repeat: none;
+  background-size: cover;
+}
+/* line 274, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-stage-outer .banner-2 {
+  background: #333 url("../images/slide/banner-2.jpg") center center;
+  background-repeat: none;
+  background-size: cover;
+}
+/* line 275, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-stage-outer .banner-3 {
+  background: #142028 url("../images/slide/banner-3.jpg") center center;
+  background-repeat: none;
+  background-size: cover;
+}
+/* line 282, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-controls .owl-nav .owl-prev, .owl-carousel-component .owl-controls .owl-nav .owl-next {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  font-size: 0;
+  margin-top: -50px;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+/* line 291, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-controls .owl-nav .owl-prev:hover, .owl-carousel-component .owl-controls .owl-nav .owl-next:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* line 293, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-controls .owl-nav .owl-prev {
+  left: 0;
+  background: url("../images/slide/arrow-left.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* line 294, ../scss/_default-gate72.scss */
+.owl-carousel-component .owl-controls .owl-nav .owl-next {
+  right: 0;
+  background: url("../images/slide/arrow-right.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media only screen {
+  /* line 307, ../scss/_default-gate72.scss */
+  .owl-carousel-component .banner-1, .owl-carousel-component .banner-2, .owl-carousel-component .banner-3 {
+    padding: 20px 0px;
+  }
+  /* line 309, ../scss/_default-gate72.scss */
+  .owl-carousel-component .impact-mensagem .title-impact-mensagem {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #fff;
+    font-size: 1.375em;
+    margin: 0;
+  }
+  /* line 310, ../scss/_default-gate72.scss */
+  .owl-carousel-component .impact-mensagem .sub-impact-mensagem {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #8fa5b2;
+    font-weight: 100;
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 317, ../scss/_default-gate72.scss */
+  .owl-carousel-component .banner-1, .owl-carousel-component .banner-2, .owl-carousel-component .banner-3 {
+    padding: 150px 0px;
+  }
+  /* line 319, ../scss/_default-gate72.scss */
+  .owl-carousel-component .impact-mensagem .title-impact-mensagem {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #fff;
+    font-size: 2.375em;
+    margin: 0;
+  }
+  /* line 320, ../scss/_default-gate72.scss */
+  .owl-carousel-component .impact-mensagem .sub-impact-mensagem {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #8fa5b2;
+    font-weight: 100;
+    font-size: 1.8em;
+  }
 }
 
 /* line 2, ../scss/components/_header-component.scss */

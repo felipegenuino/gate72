@@ -21,4 +21,32 @@ Pixels	EMs			Percent		Points
 23px	1.438em		143.8%		17pt
 24px	1.500em		150.0%		18pt
 
+
+#Compass Color Helpers
+
+	These color functions are useful for creating generic libraries that have to accept a range of inputs. For more color functions see the sass reference documentation
+
+	adjust-lightness($color, $amount)
+	Adds $amount to $color's lightness value. $amount can be negative.
+
+	adjust-saturation($color, $amount)
+	Adds $amount to $color's saturation value. $amount can be negative.
+
+	scale-lightness($color, $amount)
+	Scales $color's lightness value by $amount. $amount can be negative.
+
+	scale-saturation($color, $amount)
+	Scales $color's saturation value by $amount. $amount can be negative.
+
+	shade($color, $percentage)
+	Darkens the $color by mixing it with black as specified by $percentage.
+
+	tint($color, $percentage)
+	Lightens the $color by mixing it with white as specified by $percentage.
+
+
+
+
 */
+
+
